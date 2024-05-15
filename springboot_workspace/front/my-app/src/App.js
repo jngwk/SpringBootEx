@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Counter from "./hooks/Counter";
+import Info from "./hooks/Info";
+import ContextSample from "./hooks/ContextSample";
+import Average from "./hooks/Average";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// const App = () => {
+//   const [visible, setVisibility] = useState(false);
+//   return (
+//     <div>
+//       <button
+//         onClick={() => {
+//           setVisibility(!visible);
+//         }}
+//       >
+//         {visible ? "숨기기" : "보이기"}
+//       </button>
+//       <hr />
+//       {visible && <Info />}
+//     </div>
+//   );
+// };
+
+const App = () => {
+  return <Average />;
+};
 
 export default App;
