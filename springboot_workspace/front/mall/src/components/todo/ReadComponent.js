@@ -13,7 +13,7 @@ const initState = {
 const ReadComponent = ({ tno }) => {
   const [todo, setTodo] = useState(initState);
   //파라미터를 가지고 페이지를 이동하는 기능은 useCustomMove()
-  const { moveToModify } = useCustomMove();
+  const { moveToModify, moveToList } = useCustomMove();
   useEffect(() => {
     getOne(tno).then((data) => {
       console.log(data);
@@ -30,8 +30,14 @@ const ReadComponent = ({ tno }) => {
       <div className="flex justify-end p-4">
         <button
           type="button"
-          className="rounded p-4 m-2 text-xl w-32 text-white bg-
-blue-500"
+          className="rounded p-4 m-2 text-xl w-32 text-white bg-blue-500"
+          onClick={() => moveToList(tno)}
+        >
+          List
+        </button>
+        <button
+          type="button"
+          className="rounded p-4 m-2 text-xl w-32 text-white bg-blue-500"
           onClick={() => moveToModify(tno)}
         >
           Modify
