@@ -1,13 +1,14 @@
 // import { createBrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react"; // 필요한 순간까지 컴포넌트를 메모리상으로 올리지 않도록 지연로딩
 import todoRouter from "./todoRouter";
+import productsRouter from "./productsRouter";
 
 const { createBrowserRouter } = require("react-router-dom");
 const Loading = <div>Loading...</div>; // 컴포넌트의 처리가 끝나지 않은 경우 화면에 ‘Loading...’ 메시지 출력
 const Main = lazy(() => import("../pages/MainPage"));
 const About = lazy(() => import("../pages/AboutPage"));
 const TodoIndex = lazy(() => import("../pages/todo/IndexPage"));
-const TodoList = lazy(() => import("../pages/todo/ListPage"));
+const ProductsIndex = lazy(() => import("../pages/products/IndexPage"));
 
 const root = createBrowserRouter([
   {
@@ -34,6 +35,15 @@ const root = createBrowserRouter([
       </Suspense>
     ), //지연로딩
     children: todoRouter(),
+  },
+  {
+    path: "products",
+    element: (
+      <Suspense fallback={Loading}>
+        <ProductsIndex />
+      </Suspense>
+    ),
+    children: productsRouter(),
   },
 ]);
 export default root;
