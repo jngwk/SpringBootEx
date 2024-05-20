@@ -27,3 +27,5 @@ function Toolbar(props){
         </div>
     )
 }
+
+export default Toolbar;
