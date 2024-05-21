@@ -10,6 +10,7 @@ import CommentList from "./chapter_05/CommentList";
 import AttendanceBook from "./chapter_10/AttendanceBook";
 import NotificationList from "./chapter_06/NotificationList";
 import Accomodate from "./chapter_07/Accommodate";
+import SignUp from "./chapter_11/SignUp";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -21,7 +22,7 @@ import Accomodate from "./chapter_07/Accommodate";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Accomodate />
+    <SignUp />
   </React.StrictMode>
 );
 reportWebVitals();
