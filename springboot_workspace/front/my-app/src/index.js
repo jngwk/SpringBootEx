@@ -13,6 +13,7 @@ import Accomodate from "./chapter_07/Accommodate";
 import SignUp from "./chapter_11/SignUp";
 import TemperatureCalculator from "./chapter_12/TemperatureCalculator";
 import ProfileCard from "./chapter_13/ProfileCard";
+import DarkOrLight from "./chapter_14/DarkOrLight";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -24,7 +25,7 @@ import ProfileCard from "./chapter_13/ProfileCard";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ProfileCard />
+    <DarkOrLight />
   </React.StrictMode>
 );
 reportWebVitals();
