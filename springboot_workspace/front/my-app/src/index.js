@@ -12,6 +12,7 @@ import NotificationList from "./chapter_06/NotificationList";
 import Accomodate from "./chapter_07/Accommodate";
 import SignUp from "./chapter_11/SignUp";
 import TemperatureCalculator from "./chapter_12/TemperatureCalculator";
+import ProfileCard from "./chapter_13/ProfileCard";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -23,7 +24,7 @@ import TemperatureCalculator from "./chapter_12/TemperatureCalculator";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <TemperatureCalculator />
+    <ProfileCard />
   </React.StrictMode>
 );
 reportWebVitals();
